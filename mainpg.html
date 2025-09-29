@@ -1,0 +1,1224 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>Mainpg</title>
+    <link rel="stylesheet" href="mainpg.css" />
+    <style>
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        overflow-x: hidden;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        vertical-align: top;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gasoek+One&amp;family=Noto+Sans+KR:wght@100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap&amp;_cacheOverride=1755009814392"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="http://127.0.0.1:5500/mainpg.css?_cacheOverride=1755009814392"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="#" id="left_bar_btn">
+        <img src="images/icons/toggle.png" alt="toggle" />
+      </a>
+      <a href="#" id="mobile_logo">
+        <img src="images/icons/logo.png" alt="logo" />
+      </a>
+      <a href="#" class="mypg">
+        <img src="images/icons/mypg.png" alt="mypg" />
+      </a>
+    </header>
+    <!-- mobile header end -->
+    <div id="desktopheader">
+      <h1><img src="images/icons/logo.png" alt="" /></h1>
+      <ul id="global_menus">
+        <li>동영상 강좌</li>
+        <li>플러그인</li>
+        <li>커뮤니티</li>
+        <li>작곡모임</li>
+        <li>Radio</li>
+      </ul>
+      <span class="user">
+        <a href="#">
+          <img src="images/icons/profile.png" alt="프로필" />
+        </a>
+        <p>사용자의 이름 표시</p>
+      </span>
+    </div>
+    <div id="left_bar">
+      <img src="images/icons/close2.png" alt="닫기" id="close_btn" />
+      <div class="profile">
+        <a href="#"><img src="images/icons/profile.png" alt="프로필사진" /></a>
+        <p>
+          사용자의 이름 <br />
+          프로필 보기
+        </p>
+      </div>
+      <ul class="site_nav">
+        <li><a href="mainpg.html">동영상 강좌</a></li>
+        <li><a href="#">플러그인</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="#">작곡모임</a></li>
+        <li><a href="#">Radio</a></li>
+      </ul>
+      <ul class="user_service">
+        <li><a href="#">구독정보</a></li>
+        <li><a href="#">서비스 지원</a></li>
+        <li><a href="#">로그아웃</a></li>
+      </ul>
+      <ul class="sns_icons">
+        <li><img src="images/icons/facebook.png" alt="페이스북" /></li>
+        <li><img src="images/icons/twitter.png" alt="트위터" /></li>
+        <li><img src="images/icons/instagram.png" alt="인스타그램" /></li>
+        <li><img src="images/icons/youtube.png" alt="유튜브" /></li>
+      </ul>
+    </div>
+    <div id="overlay"></div>
+    <!-- left bar end -->
+    <div id="search">
+      <button id="search-btn">
+        <img src="images/icons/search.svg" alt="검색" id="search-icon" />
+      </button>
+      <label for="search-input">검색어를 입력하세요</label>
+      <input type="search" id="search-input" />
+    </div>
+    <!-- search end -->
+    <div class="bannerM">
+      <a href="#"><img src="images/bannerM1.jpg" alt="#" id="bannerM-img" /></a>
+    </div>
+    <div class="banner">
+      <a href="#"><img src="images/banner1.jpg" alt="#" id="banner-img" /></a>
+    </div>
+    <!-- banner end -->
+    <div id="background">
+      <div id="contents_wrap">
+        <input type="radio" name="tab" id="tab1" checked="" />
+        <input type="radio" name="tab" id="tab2" />
+        <input type="radio" name="tab" id="tab3" />
+        <input type="radio" name="tab" id="tab4" />
+        <div class="tabs-container">
+          <ul id="tabs" class="active">
+            <li class="tabMenu">
+              <label
+                for="tab1"
+                onclick="document.getElementById('tab1').checked = true"
+                >Full Video</label
+              >
+            </li>
+            <li class="tabMenu">
+              <label
+                for="tab2"
+                onclick="document.getElementById('tab2').checked = true"
+                >Shorts</label
+              >
+            </li>
+            <li class="tabMenu">
+              <label
+                for="tab3"
+                onclick="document.getElementById('tab3').checked = true"
+                >장르별 보기</label
+              >
+            </li>
+            <li class="tabMenu">
+              <label
+                for="tab4"
+                onclick="document.getElementById('tab4').checked = true"
+                >프리미엄 비디오</label
+              >
+            </li>
+          </ul>
+          <!-- tab end -->
+        </div>
+        <div class="contents">
+          <section class="full_video content" id="content1">
+            <h1>Full Video</h1>
+            <h2>인기 영상</h2>
+            <article class="popular-video">
+              <div class="slide-container">
+                <div class="slidecontents">
+                  <a class="thumbnail" href="videopg.html">
+                    <img src="images/Video_popular1.jpg" alt="ㅇㅇ" />
+                    <h4>룸 어쿠스틱을 <br />위한 작업실</h4>
+                    <p>The Quiett</p>
+                    <p class="slidecontents-footer">마스터링</p>
+                  </a>
+                </div>
+                <div class="slidecontents">
+                  <a href="#" class="thumbnail"
+                    ><img src="images/Video_popular2.jpg" alt="ㅇㅇ" />
+                    <h4>
+                      Drill 장르의 <br />
+                      808 bass 세팅
+                    </h4>
+                    <p>Paul Blanco</p>
+                    <p class="slidecontents-footer">Drill</p>
+                  </a>
+                </div>
+                <div class="slidecontents">
+                  <a href="#" class="thumbnail"
+                    ><img src="images/Video_popular3.jpg" alt="ㅇㅇ" />
+                    <h4>ATL trap <br />사운드 메이킹</h4>
+                    <p>Lean $moke</p>
+                    <p class="slidecontents-footer">Trap</p>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="new-video">
+              <h2>신규 영상</h2>
+              <div class="slide-container">
+                <div class="slidecontents">
+                  <a class="thumbnail" href="#"
+                    ><img src="images/Video_new1.jpg" alt="ㅇㅇ"
+                  /></a>
+                  <h4>비트를 만들 때 <br />고민하는 과정</h4>
+                  <p>sAewoo</p>
+                  <p class="slidecontents-footer">R&B</p>
+                </div>
+                <div class="slidecontents">
+                  <a href="#" class="thumbnail"
+                    ><img src="images/Video_new2.jpg" alt="ㅇㅇ"
+                  /></a>
+                  <h4>
+                    트랙, 사운드 배치의 <br />
+                    이유
+                  </h4>
+                  <p>sAewoo</p>
+                  <p class="slidecontents-footer">R&B</p>
+                </div>
+                <div class="slidecontents">
+                  <a href="#" class="thumbnail"
+                    ><img src="images/Video_new3.jpg" alt="ㅇㅇ"
+                  /></a>
+                  <h4>
+                    보다 섬세한 <br />
+                    사운드 디자인
+                  </h4>
+                  <p>Metro Boomin</p>
+                  <p class="slidecontents-footer">Hiphop</p>
+                </div>
+              </div>
+            </article>
+            <article class="recomn-creator">
+              <h2>추천 크리에이터</h2>
+              <div class="recomn-sliderbox">
+                <div class="recomn-slider-contents">
+                  <a class="thumbnail" href="#"
+                    ><img src="images/remonmcreator_1.jpg" alt="ㅇㅇ"
+                  /></a>
+                  <h4>프로듀서 , sAewoo</h4>
+                  <p>
+                    위더플릭 레코즈의 프로듀서와 엔지니어. 최근 프로듀싱 뿐
+                    아니라 엔지니어링 디렉팅 등으로 보폭을 넓히고 있다.
+                  </p>
+                </div>
+                <div class="recomn-slider-contents">
+                  <a class="thumbnail" href="#"
+                    ><img src="images/remonmcreator_2.jpg" alt="ㅇㅇ"
+                  /></a>
+                  <h4>비트메이커 , Lean$moke</h4>
+                  <p>
+                    GPS크루의 주축 중 한명으로 최근에는 힙합 경연 프로그램 DROP
+                    THE BEAT 컨텐츠의 비트를 담당하여 인지도를 쌓았다.
+                  </p>
+                </div>
+                <div class="recomn-slider-contents">
+                  <a class="thumbnail" href="#"
+                    ><img src="images/remonmcreator_3.jpg" alt="ㅇㅇ"
+                  /></a>
+                  <h4>프로듀서 래퍼 , 창모</h4>
+                  <p>
+                    피아노와 클래식을 기반으로 음악을 시작하여, 다양한 장르르
+                    시도하며 여러 장르를 그만의 스타일로 해석하여 보여준다.
+                  </p>
+                </div>
+                <div class="recomn-slider-contents">
+                  <a class="thumbnail" href="#"
+                    ><img src="images/remonmcreator_4.jpg" alt="ㅇㅇ"
+                  /></a>
+                  <h4>프로듀서 , 토일</h4>
+                  <p>
+                    Ash island, Leellarmarz등과 함께 작업하며 인지도를 쌓았으며
+                    최근 Daytona Records에 합류애 많은 기대를 불러 일으키고
+                    있다.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <h2>Top Creator</h2>
+            <article class="top-creator">
+              <div class="row1 row">
+                <span class="row_img">
+                  <img src="images/top_creator1.jpg" alt="1" />
+                </span>
+                <span class="rank">1</span>
+                <span class="row_description">
+                  <p class="description_title">싱어송라이터, 자이언티</p>
+                  <p class="row_description_text">
+                    많은 히트곡을 통하여 소통해온 자이언티. 늘 새로운 도전으로
+                    다양한 모습을 보여준 그가 전하는 아티스트로서의 이야기
+                  </p>
+                </span>
+              </div>
+              <div class="row2 row">
+                <span class="row_img">
+                  <img src="images/top_creator2.jpg" alt="1" />
+                </span>
+                <span class="rank">2</span>
+                <span class="row_description">
+                  <p class="description_title">싱어송라이터, 주영</p>
+                  <p class="row_description_text">
+                    유행에 편승하는 음악만이 아닌 오랫동안 간직할 수 있는
+                    자신만의 음악세계를 확고히 구축하고 있는 싱어송라이터 주영
+                  </p>
+                </span>
+              </div>
+              <div class="row3 row">
+                <span class="row_img">
+                  <img src="images/top_creator3.jpg" alt="1" />
+                </span>
+                <span class="rank">3</span>
+                <span class="row_description">
+                  <p class="description_title">믹스엔지니어 , 등대사운드</p>
+                  <p class="row_description_text">
+                    많은 아티스트의 믹싱, 마스터링을 담당하고 있는 엔지니어
+                    등대사운드. 다양한 음악을 작업하며 자신의 음악을 확고히
+                    다지는 그가 전하는 음악 철학을 들어보자.
+                  </p>
+                </span>
+              </div>
+              <div class="row4 row">
+                <span class="row_img">
+                  <img src="images/top_creator4.jpg" alt="1" />
+                </span>
+                <span class="rank">4</span>
+                <span class="row_description">
+                  <p class="description_title">믹스 엔지니어 , 영인</p>
+                  <p class="row_description_text">
+                    켄드릭 라마, 포스트 말론 등 세계 정상의 아티스트와 함께 해온
+                    엔지니어 영인이 말하는 그가 현재의 위치에 올라가기 위한
+                    자세와 시장에서 살아남기 위한 팁을 들어보자.
+                  </p>
+                </span>
+              </div>
+              <div class="row5 row">
+                <span class="row_img">
+                  <img src="images/top_creator5.jpg" alt="1" />
+                </span>
+                <span class="rank">5</span>
+                <span class="row_description">
+                  <p class="description_title">Producing, Full8lomm</p>
+                  <p class="row_description_text">
+                    K-Pop 시장의 부흥기인 2016년부터 활동을 시작한 팀으로 다양한
+                    아티스트와의 작업으로 이름을 알리며 현재까지도 필드에서
+                    활발하게 활동하고 있는 그들의 작업방식과 실전 노하우를
+                    알아보자.
+                  </p>
+                </span>
+              </div>
+            </article>
+          </section>
+          <!-- Full contents end -->
+          <section class="short_video content" id="content2">
+            <h1>Shorts</h1>
+            <h3>trap</h3>
+            <div class="keyword_video">
+              <div class="slidecontents2">
+                <a href="#"><img src="images/Trap_Shorts_1.jpg" alt="1번" /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_1.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>icos라는 얼터이고로 해석한 트랩</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"><img src="images/Trap_Shorts_2.jpg" alt="1번" /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_2.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>토일의 히트곡 gone 분석하기</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"><img src="images/Trap_Shorts_3.jpg" alt="1번" /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_3.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>2-5-1 진행 기초적인 코드 메이킹</p>
+                </div>
+              </div>
+            </div>
+            <h3>Rage</h3>
+            <div class="keyword_video">
+              <div class="slidecontents2">
+                <a href="#"><img src="images/Rage_Shorts1.jpg" alt="1번" /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_4.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>누구나 따라할 수 있는 홈 레코딩 꿀팁</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"><img src="images/Rage_Shorts2.jpg" alt="1번" /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_5.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>창모와 함께하는 본인만의 색깔을 찾는 방법</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"><img src="images/Rage_Shorts3.jpg" alt="1번" /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_6.jfif"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>창모가 말하는 새로운 시장, Rage에 대해</p>
+                </div>
+              </div>
+            </div>
+            <h3>화성학</h3>
+            <div class="keyword_video">
+              <div class="slidecontents2">
+                <a href="#"
+                  ><img src="images/harmonic_shorts1.jpg" alt="1번"
+                /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_7.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>화성학을 통해 체계적으로 곡 만드는 법</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"
+                  ><img src="images/harmonic_shorts2.jpg" alt="1번"
+                /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_8.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>영감을 받고 이를 음악으로 구체화하는 법</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"
+                  ><img src="images/harmonic_shorts3.jpg" alt="1번"
+                /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_9.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>Voicing을 통해 뻔하지 않은 코드 만들기</p>
+                </div>
+              </div>
+            </div>
+            <h3>붐뱁</h3>
+            <div class="keyword_video">
+              <div class="slidecontents2">
+                <a href="#"
+                  ><img src="images/boombap_shorts1.jpg" alt="1번"
+                /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_10.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>VMC만의 컴필레이션 작업 방법</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"
+                  ><img src="images/boombap_shorts2.jpg" alt="1번"
+                /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_11.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>돌고돌아 다시 여기, 붐뱁 빠르게 만들기</p>
+                </div>
+              </div>
+              <div class="slidecontents2">
+                <a href="#"
+                  ><img src="images/boombap_shorts3.jpg" alt="1번"
+                /></a>
+                <div class="creator_thumb">
+                  <a href="#"
+                    ><img
+                      class="slidecontents2_profile"
+                      src="images/shorts_creator_12.jpg"
+                      alt="크리에이터1"
+                  /></a>
+                  <p>레퍼런스를 분석하여 체화시키는 방법</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Shorts contents end -->
+          <section class="genre_video content" id="content3">
+            <h1>장르별 보기</h1>
+            <div class="kpop_content_wrapper">
+              <h2 class="left">K-Pop</h2>
+              <div class="kpop_content">
+                <h4>K-Pop의 개요</h4>
+                <p>
+                  한국 팝의 줄임말인 K-Pop은 팝, 힙합, R&amp;B, 일렉트로닉
+                  음악의 끊임없이 진화하는 융합체입니다. 귀에 쏙 들어오는
+                  멜로디, 동기화된 안무, 고도로 스타일화된 비주얼이 특징인
+                  K-Pop은 90년대 초 서태지와 아이들 등의 그룹과 함께 형태를
+                  갖추기 시작한 후 2000년대와 2010년대에 전 세계적인 현상으로
+                  자리 잡았습니다.
+                </p>
+                <div class="kpop_images">
+                  <a href="#" class="photo1"
+                    ><img
+                      src="images/genre_kpop_1.jpg"
+                      alt="kpop1"
+                      class="photo2"
+                  /></a>
+                  <a href="#" class="photo2"
+                    ><img src="images/genre_kpop_2.jpg" alt="kpop2"
+                  /></a>
+                  <a href="#" class="photo3"
+                    ><img src="images/genre_kpop_3.jpg" alt="kpop3"
+                  /></a>
+                  <a href="#" class="photo4"
+                    ><img src="images/genre_kpop_4.jpg" alt="kpop4"
+                  /></a>
+                  <a href="#" class="photo5"
+                    ><img src="images/genre_kpop_5.jpg" alt="kpop5"
+                  /></a>
+                  <a href="#" class="photo6"
+                    ><img src="images/genre_kpop_6.jpg" alt="kpop6"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <h2 class="right">HipHop</h2>
+            <div class="hiphop_content">
+              <h4>힙합의 기원</h4>
+              <p>
+                한국 팝의 줄임말인 K-Pop은 팝, 힙합, R&amp;B, 일렉트로닉 음악의
+                끊임없이 진화하는 융합체입니다. 귀에 쏙 들어오는 멜로디,
+                동기화된 안무, 고도로 스타일화된 비주얼이 특징인 K-Pop은 90년대
+                초 서태지와 아이들 등의 그룹과 함께 형태를 갖추기 시작한 후
+                2000년대와 2010년대에 전 세계적인 현상으로 자리 잡았습니다.
+              </p>
+              <div class="hiphop_images">
+                <a href="#" class="photo1"
+                  ><img src="images/genre_kpop_1.jpg" alt="hiphop1"
+                /></a>
+                <a href="#" class="photo2"
+                  ><img src="images/genre_kpop_2.jpg" alt="hiphop2"
+                /></a>
+                <a href="#" class="photo3"
+                  ><img src="images/genre_kpop_3.jpg" alt="hiphop3"
+                /></a>
+                <a href="#" class="photo4"
+                  ><img src="images/genre_kpop_4.jpg" alt="hiphop4"
+                /></a>
+                <a href="#" class="photo5"
+                  ><img src="images/genre_kpop_5.jpg" alt="hiphop5"
+                /></a>
+                <a href="#" class="photo6"
+                  ><img src="images/genre_kpop_6.jpg" alt="hiphop6"
+                /></a>
+              </div>
+            </div>
+            <h2 class="center">Every Genres</h2>
+            <div class="every_images">
+              <a href="#" class="genre1"
+                ><img src="images/genre_all1.jpg" alt="genre_all1"
+              /></a>
+              <a href="#" class="genre2"
+                ><img src="images/genre_all2.jpg" alt="genre_all2"
+              /></a>
+              <a href="#" class="genre3"
+                ><img src="images/genre_all3.jpg" alt="genre_all3"
+              /></a>
+              <a href="#" class="genre4"
+                ><img src="images/genre_all4.jpg" alt="genre_all4"
+              /></a>
+              <a href="#" class="genre5"
+                ><img src="images/genre_all5.jpg" alt="genre_all5"
+              /></a>
+              <a href="#" class="genre6"
+                ><img src="images/genre_all6.jpg" alt="genre_all6"
+              /></a>
+            </div>
+          </section>
+          <section class="genre_video content" id="content3_descktop">
+            <h1>장르별 보기</h1>
+
+            <div class="kpop_wrapper">
+              <div class="kpop_first_row">
+                <span class="first_row_text">
+                  <h2 class="left">K-Pop</h2>
+                  <h4>K-Pop의 개요</h4>
+                  <p>
+                    한국 팝의 줄임말인 K-Pop은 팝, 힙합, R&amp;B, 일렉트로닉
+                    음악의 끊임없이 진화하는 융합체입니다. 귀에 쏙 들어오는
+                    멜로디, 동기화된 안무, 고도로 스타일화된 비주얼이 특징인
+                    K-Pop은 90년대 초 서태지와 아이들 등의 그룹과 함께 형태를
+                    갖추기 시작한 후 2000년대와 2010년대에 전 세계적인 현상으로
+                    자리 잡았습니다.
+                  </p>
+                </span>
+                <a href="#"
+                  ><img src="images/genre_kpop_1.jpg" alt="kpop1"
+                /></a>
+              </div>
+              <div class="kpop_second_row">
+                <a href="#" class="photo1"
+                  ><img src="images/genre_kpop_1.jpg" alt="kpop1"
+                /></a>
+                <a href="#" class="photo2"
+                  ><img src="images/genre_kpop_2.jpg" alt="kpop2"
+                /></a>
+                <a href="#" class="photo3"
+                  ><img src="images/genre_kpop_3.jpg" alt="kpop3"
+                /></a>
+                <a href="#" class="photo4"
+                  ><img src="images/genre_kpop_4.jpg" alt="kpop4"
+                /></a>
+                <a href="#" class="photo5"
+                  ><img src="images/genre_kpop_5.jpg" alt="kpop5"
+                /></a>
+                <a href="#" class="photo6"
+                  ><img src="images/genre_kpop_6.jpg" alt="kpop6"
+                /></a>
+                <a href="#" class="photo7"
+                  ><img src="images/genre_kpop_6.jpg" alt="kpop7"
+                /></a>
+              </div>
+            </div>
+            <div class="hiphop_wrapper">
+              <div class="hiphop_first_row">
+                <a href="#"
+                  ><img src="images/genre_hiphop_1.jpg" alt="kpop1"
+                /></a>
+                <span class="first_row_text">
+                  <h2 class="right">Hip Hop</h2>
+                  <h4>힙합의 기원</h4>
+                  <p>
+                    힙합은 1970년대 미국 뉴욕의 브롱스에서 유행하기 시작한 춤과
+                    대중음악으로부터 파생된 거리문화입니다. 또한 미국 뉴욕의
+                    브롱스에서 아프리카계 미국인과 캐리비안계 미국인, 히스패닉계
+                    주민의 커뮤니티에서 행해지고 있었던 블록 파티에서 태어난
+                    문화입니다. 힙합은 랩, 비보잉, 그래피티, 비트박스, 디제잉
+                    크게 4요소로 이루어져 있습니다.
+                  </p>
+                </span>
+              </div>
+              <div class="hiphop_second_row">
+                <a href="#" class="photo1"
+                  ><img src="images/genre_hiphop_2.jpg" alt="kpop1"
+                /></a>
+                <a href="#" class="photo2"
+                  ><img src="images/genre_hiphop_3.jpg" alt="kpop2"
+                /></a>
+                <a href="#" class="photo3"
+                  ><img src="images/genre_hiphop8.jpg" alt="kpop3"
+                /></a>
+                <a href="#" class="photo4"
+                  ><img src="images/genre_hiphop_4.jpg" alt="kpop4"
+                /></a>
+                <a href="#" class="photo5"
+                  ><img src="images/genre_hiphop_5.jpg" alt="kpop5"
+                /></a>
+                <a href="#" class="photo6"
+                  ><img src="images/genre_hiphop_6.jpg" alt="kpop6"
+                /></a>
+                <a href="#" class="photo7"
+                  ><img src="images/genre_hiphop_7.jpg" alt="kpop7"
+                /></a>
+              </div>
+            </div>
+            <h2 class="center">Every Genres</h2>
+            <div class="every_images">
+              <a href="#" class="genre1"
+                ><img src="images/genre_all1.jpg" alt="genre_all1"
+              /></a>
+              <a href="#" class="genre2"
+                ><img src="images/genre_all2.jpg" alt="genre_all2"
+              /></a>
+              <a href="#" class="genre3"
+                ><img src="images/genre_all3.jpg" alt="genre_all3"
+              /></a>
+              <a href="#" class="genre4"
+                ><img src="images/genre_all4.jpg" alt="genre_all4"
+              /></a>
+              <a href="#" class="genre5"
+                ><img src="images/genre_all5.jpg" alt="genre_all5"
+              /></a>
+              <a href="#" class="genre6"
+                ><img src="images/genre_all6.jpg" alt="genre_all6"
+              /></a>
+            </div>
+          </section>
+          <!-- Genre contents end -->
+          <section class="premium_video content" id="content4">
+            <h1>프리미엄 비디오</h1>
+            <article class="premium_introduction">
+              <h2>
+                인증된 창작자들이 제공하는 <br />
+                프리미엄 컨텐츠를 제공해보세요
+              </h2>
+              <p class="subtitle">
+                전문적인 강좌부터<br />
+                그들이 음악을 대하는 태도까지
+              </p>
+              <span class="free_trial">무료 체험하기</span>
+              <span class="go_premium">프리미엄으로 업그레이드하기</span>
+            </article>
+            <article class="premium_tags">
+              <span
+                ><p>사운드 디자인</p>
+                <img src="images/icons/arrow.png" alt="화살표"
+              /></span>
+              <span
+                ><p>멜로디 메이킹</p>
+                <img src="images/icons/arrow.png" alt="화살표"
+              /></span>
+              <span
+                ><p>믹스 마스터</p>
+                <img src="images/icons/arrow.png" alt="화살표"
+              /></span>
+              <span
+                ><p>화성학 심화</p>
+                <img src="images/icons/arrow.png" alt="화살표"
+              /></span>
+              <span
+                ><p>룸 어쿠스틱</p>
+                <img src="images/icons/arrow.png" alt="화살표"
+              /></span>
+            </article>
+            <article class="premium_contents">
+              <div class="premium_lesson">
+                <a href="#"><img src="images/premium_1.png" alt="1" /></a>
+                <p><strong>Pink Sweat$</strong></p>
+                <p class="description">
+                  글로벌 뮤지션 핑크 스웨츠의 음악 세계,작곡과 철학
+                </p>
+              </div>
+              <div class="premium_lesson">
+                <a href="#"><img src="images/premium_2.png" alt="2" /></a>
+                <p><strong>10cm</strong></p>
+                <p class="description">
+                  폰서트와 스토커 등 10cm의 대표곡을 통해서 배우는 작곡
+                </p>
+              </div>
+              <div class="premium_lesson">
+                <a href="#"><img src="images/premium_3.png" alt="3" /></a>
+                <p><strong>영인</strong></p>
+                <p class="description">
+                  그래미 수상 엔지니어 영인의 믹스&amp;마스터링 노하우
+                </p>
+              </div>
+              <div class="premium_lesson">
+                <a href="#"><img src="images/premium_4.png" alt="4" /></a>
+                <p><strong>Lean$moke</strong></p>
+                <p class="description">
+                  랩을 하고싶게 만들어지는 Lean$moke만의 비트메이킹 비법
+                </p>
+              </div>
+            </article>
+            <h2>회원님을 위한 추천 크리에이터</h2>
+            <article class="premium_recomn">
+              <div class="premium_slidebox">
+                <div class="premium_slidecontents">
+                  <img src="images/recomncreator_1.jpg" alt="추천 크리에이터" />
+                  <p class="premium_slidecontents_title">릴 모시핏</p>
+                  <p class="description2">
+                    힙합 신의 대세 프로듀싱팀 그루비룸의 멤버로도 활동 중인 그는
+                    흑인 음악에 기반을 둔 트렌디한 사운드로 유명 래퍼들의
+                    러브콜을 받으며 데뷔와 동시에 언더와 오버의 경계 없이 역량을
+                    펼쳤다. 이 강좌를 통하여 대중과 장르팬들의 니즈를 모두
+                    충족시킬 수 있었던 그의 작업방식과 태도에 대해 알아보자.
+                  </p>
+                </div>
+                <div class="premium_slidecontents">
+                  <img
+                    src="images/Trap_Shorts_Creater_1.jpg"
+                    alt="추천 크리에이터"
+                  />
+                  <p>프레디 카소</p>
+                  <p class="description2">
+                    2024 한국 힙합 어워즈 올해의 프로듀서로 선정된 그는 많은
+                    작업량과 또한 모든 작품 수작 이상의 퀄리티를 보여주며
+                    드럼리스 비트를 주로 찍지만, iCos라는 또다른 이름으로
+                    트랩비트토 찍는다. 특히 SECOND II NONE과 Empire State
+                    Motel로 인해 한국 드럼리스 프로듀싱의 정점이라 불리는 그의
+                    음악적인 역량을 배워볼 수 있다.
+                  </p>
+                </div>
+              </div>
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span class="close-btn">×</span>
+                  <p id="modal-text"></p>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="premium_video content" id="content4_descktop">
+            <h1>프리미엄 비디오</h1>
+            <article class="premium_introduction">
+              <div class="introduction_text">
+                <h2>
+                  인증된 창작자들이 제공하는 <br />
+                  프리미엄 컨텐츠를 제공해보세요
+                </h2>
+                <p class="subtitle">
+                  전문적인 강좌부터<br />
+                  그들이 음악을 대하는 태도까지
+                </p>
+              </div>
+              <div class="introduction_btn">
+                <span class="free_trial"><p>무료 체험하기</p></span>
+                <span class="go_premium"
+                  ><p>프리미엄으로 업그레이드하기</p></span
+                >
+              </div>
+            </article>
+            <div class="premium_classwrap">
+              <article class="premium_tags">
+                <span
+                  ><p>사운드 디자인</p>
+                  <img src="images/icons/arrow.png" alt="화살표"
+                /></span>
+                <span
+                  ><p>멜로디 메이킹</p>
+                  <img src="images/icons/arrow.png" alt="화살표"
+                /></span>
+                <span
+                  ><p>믹스 마스터</p>
+                  <img src="images/icons/arrow.png" alt="화살표"
+                /></span>
+                <span
+                  ><p>화성학 심화</p>
+                  <img src="images/icons/arrow.png" alt="화살표"
+                /></span>
+                <span
+                  ><p>룸 어쿠스틱</p>
+                  <img src="images/icons/arrow.png" alt="화살표"
+                /></span>
+              </article>
+              <article class="premium_contents">
+                <div class="premium_lesson">
+                  <a href="#"><img src="images/premium_1.png" alt="1" /></a>
+                  <p><strong>Pink Sweat$</strong></p>
+                  <p class="description">
+                    글로벌 뮤지션 핑크 스웨츠의 음악 세계,작곡과 철학
+                  </p>
+                </div>
+                <div class="premium_lesson">
+                  <a href="#"><img src="images/premium_2.png" alt="2" /></a>
+                  <p><strong>10cm</strong></p>
+                  <p class="description">
+                    폰서트와 스토커 등 10cm의 대표곡을 통해서 배우는 작곡
+                  </p>
+                </div>
+                <div class="premium_lesson">
+                  <a href="#"><img src="images/premium_3.png" alt="3" /></a>
+                  <p><strong>영인</strong></p>
+                  <p class="description">
+                    그래미 수상 엔지니어 영인의 믹스&amp;마스터링 노하우
+                  </p>
+                </div>
+                <div class="premium_lesson">
+                  <a href="#"><img src="images/premium_4.png" alt="4" /></a>
+                  <p><strong>Lean$moke</strong></p>
+                  <p class="description">
+                    랩을 하고싶게 만들어지는 Lean$moke만의 비트메이킹 비법
+                  </p>
+                </div>
+              </article>
+            </div>
+            <h2 class="premium_recomn_creator">
+              회원님을 위한 추천 크리에이터
+            </h2>
+            <article class="premium_recomn">
+              <div class="premium_slidebox">
+                <div class="premium_slidecontents">
+                  <img src="images/recomncreator_1.jpg" alt="추천 크리에이터" />
+                  <p class="premium_slidecontents_title">릴 모시핏</p>
+                  <p class="description2">
+                    힙합 신의 대세 프로듀싱팀 그루비룸의 멤버로도 활동 중인 그는
+                    흑인 음악에 기반을 둔 트렌디한 사운드로 유명 래퍼들의
+                    러브콜을 받으며 데뷔와 동시에 언더와 오버의 경계 없이 역량을
+                    펼쳤다. 이 강좌를 통하여 대중과 장르팬들의 니즈를 모두
+                    충족시킬 수 있었던 그의 작업방식과 태도에 대해 알아보자.
+                  </p>
+                </div>
+                <div class="premium_slidecontents">
+                  <img src="images/recomncreator_2.jpg" alt="추천 크리에이터" />
+                  <p class="premium_slidecontents_title">프레디 카소</p>
+                  <p class="description2">
+                    2024 한국 힙합 어워즈 올해의 프로듀서로 선정된 그는 많은
+                    작업량과 또한 모든 작품 수작 이상의 퀄리티를 보여주며
+                    드럼리스 비트를 주로 찍지만, iCos라는 또다른 이름으로
+                    트랩비트토 찍는다. 특히 SECOND II NONE과 Empire State
+                    Motel로 인해 한국 드럼리스 프로듀싱의 정점이라 불리는 그의
+                    음악적인 역량을 배워볼 수 있다.
+                  </p>
+                </div>
+                <div class="premium_slidecontents">
+                  <img src="images/recomncreator_3.jpg" alt="추천 크리에이터" />
+                  <p class="premium_slidecontents_title">방달</p>
+                  <p class="description2">
+                    항상 감각적이고 세련된 사운드를 들려주는 프로듀서 GXXD
+                    (걸넥스트도어, Girlnexxtdoor). 현 밴드 페이퍼브릭 소속
+                    세영과 결성하여 2인 프로듀싱 그룹으로 시작, 19년도 1월 싱글
+                    앨범 발매 이후 방달의 솔로 활동으로 전향되었다. 내로라하는
+                    아티스트들과 꾸준히 작업을 이어가며 같은 해 10월, 새로운
+                    둥지 FA PRESENTS(에프에이)를 만들었다.
+                  </p>
+                </div>
+              </div>
+              <div id="modal_descktop" class="modal">
+                <div class="modal-content">
+                  <span class="close-btn_descktop">×</span>
+                  <p id="modal-text_descktop"></p>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+        <!-- </article> -->
+        <!-- </section> -->
+      </div>
+    </div>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="images/icons/Home.png" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/icons/likes.png" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/icons/recent.png" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/icons/cart.png" alt="home" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <div id="footer_descktop">
+      <div class="footer_contents">
+        <a href="#"><img src="images/icons/logo.png" alt="" class="logo" /></a>
+        <div class="about">
+          <p class="site_name">FM sounds.</p>
+          <span class="site_info">
+            <p class="info1">
+              이용약관 개인정보취급방침 사업자정보확인 환불규정 공지사항 FAQ
+              <br />기업 교육 브랜드 제휴
+            </p>
+            <p class="info2">주식회사 우우우현</p>
+            <p class="info3">
+              대표 : 이우현 | 개인정보관리책임자 : 김우현 | 사업자 등록번호 :
+              321-21-54321 |
+              <br />
+              통신판매업 신고번호 : 2024-서울관악-54321 | ADRESS (54321) :
+              서울특별시 관악구 신림로 321길-21 (신림동 21-2) 1층~5층 |
+            </p>
+            <p class="info4">
+              V 2.12.21 <br />@ 2025 FM sounds All Rights Reserved
+            </p>
+          </span>
+        </div>
+        <div class="news">
+          <p>최신 소식 받기</p>
+          <span>
+            <img src="images/icons/facebook.png" alt="페이스북" />
+            <img src="images/icons/twitter.png" alt="트위터" />
+            <img src="images/icons/instagram.png" alt="인스타그램" />
+            <img src="images/icons/youtube.png" alt="유튜브" />
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // DOM 준비 후 실행
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+
+        function init() {
+          document
+            .querySelectorAll('.slide-container, .keyword_video')
+            .forEach(makeDragScroll);
+        }
+
+        function makeDragScroll(container) {
+          let pointerDown = false;
+          let startX = 0;
+          let startY = 0;
+          let startScrollLeft = 0;
+          let isDragging = false;
+          let suppressClick = false;
+          const THRESHOLD = 8; // 픽셀 임계값 (보수적)
+
+          // 브라우저 이미지 기본 드래그 방지
+          container.addEventListener('dragstart', (e) => e.preventDefault());
+
+          container.addEventListener('pointerdown', (e) => {
+            // 링크나 버튼을 클릭한 경우 드래그 스크롤 비활성화
+            if (e.target.closest('a') || e.target.closest('button')) {
+              return;
+            }
+
+            if (e.pointerType === 'mouse' && e.button !== 0) return;
+            pointerDown = true;
+            isDragging = false;
+            startX = e.clientX;
+            startY = e.clientY;
+            startScrollLeft = container.scrollLeft;
+            container.classList.add('active');
+            try {
+              container.setPointerCapture?.(e.pointerId);
+            } catch (_) {}
+          });
+
+          container.addEventListener('pointermove', (e) => {
+            if (!pointerDown) return;
+            const dx = e.clientX - startX;
+            const dy = e.clientY - startY;
+            if (
+              !isDragging &&
+              (Math.abs(dx) > THRESHOLD || Math.abs(dy) > THRESHOLD)
+            ) {
+              isDragging = true;
+            }
+            if (isDragging) {
+              container.scrollLeft = startScrollLeft - dx;
+            }
+          });
+
+          const endPointer = (e) => {
+            pointerDown = false;
+            isDragging = false;
+            container.classList.remove('active');
+            try {
+              container.releasePointerCapture?.(e.pointerId);
+            } catch (_) {}
+          };
+
+          container.addEventListener('pointerup', endPointer);
+          container.addEventListener('pointercancel', endPointer);
+          container.addEventListener('pointerleave', endPointer);
+
+          // 클릭 차단: suppressClick이 true일 때만, 한 번만 차단
+          container.addEventListener(
+            'click',
+            function (e) {
+              if (!suppressClick) return;
+              const a = e.target.closest && e.target.closest('a[href]');
+              if (a) {
+                // 드래그 직후에 발생한 잘못된 클릭(링크 열림 의도 아님)만 막음
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                // console.log('suppressed click on', a.getAttribute('href'));
+              }
+              suppressClick = false;
+            },
+            false
+          );
+        }
+      })();
+
+      // --- 이하 기존 페이지 기능 유지 (왼쪽 메뉴 토글, 검색, 배너, 모달 등) ---
+      const left_bar_btn = document.getElementById('left_bar_btn');
+      const left_bar = document.getElementById('left_bar');
+      const overlay = document.getElementById('overlay');
+      const close_btn = document.getElementById('close_btn');
+
+      if (left_bar_btn && left_bar && overlay && close_btn) {
+        left_bar_btn.addEventListener('click', () => {
+          left_bar.classList.toggle('active');
+          overlay.classList.toggle('active');
+        });
+
+        close_btn.addEventListener('click', () => {
+          left_bar.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', () => {
+          left_bar.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      }
+
+      const btn = document.getElementById('search-btn');
+      const input = document.getElementById('search-input');
+      const icon = document.getElementById('search-icon');
+      let isVisible = false;
+      if (btn) {
+        btn.addEventListener('click', () => {
+          if (!isVisible) {
+            input.style.width = '82vw';
+            input.style.opacity = '1';
+            input.style.transform = 'translateX(0)';
+            icon.src = 'images/icons/close.jpg';
+          } else {
+            input.style.width = '0';
+            input.style.opacity = '0';
+            //input.style.transform = 'translateX(-2.78px)';
+            icon.src = 'images/icons/search.svg';
+          }
+          isVisible = !isVisible;
+        });
+      }
+
+      const bannerImg = document.getElementById('banner-img');
+      let current = 1;
+      const total = 3;
+      if (bannerImg) {
+        setInterval(() => {
+          current++;
+          if (current > total) current = 1;
+          bannerImg.src = `images/banner${current}.jpg`;
+        }, 6000);
+      }
+
+      const bannerMImg = document.getElementById('bannerM-img');
+      let currentM = 1;
+      const totalM = 3;
+      if (bannerMImg) {
+        setInterval(() => {
+          currentM++;
+          if (currentM > totalM) currentM = 1;
+          bannerMImg.src = `images/bannerM${current}.jpg`;
+        }, 6000);
+      }
+
+      // modal (원래 로직)
+      const descriptions = document.querySelectorAll('.description2');
+      let modal, modalText, closeBtn;
+      function setModalElements() {
+        if (window.innerWidth >= 1024) {
+          modal = document.getElementById('modal_descktop');
+          modalText = document.getElementById('modal-text_descktop');
+          closeBtn = modal ? modal.querySelector('.close-btn_descktop') : null;
+        } else if (window.innerWidth >= 360 && window.innerWidth <= 1023) {
+          modal = document.getElementById('modal');
+          modalText = document.getElementById('modal-text');
+          closeBtn = modal ? modal.querySelector('.close-btn') : null;
+        }
+      }
+      setModalElements();
+      window.addEventListener('resize', setModalElements);
+      descriptions.forEach((desc) => {
+        desc.addEventListener('click', function () {
+          const fullText = this.textContent;
+          if (modalText) modalText.textContent = fullText;
+          if (modal) modal.style.display = 'block';
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (e.target === closeBtn && modal) {
+          modal.style.display = 'none';
+        }
+      });
+      window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+      // modal style end      
+      //2
+      // 
+      /*if (window.matchMedia('(min-width:1024px)').matches){
+        let setHeight = window.addEventListener("load", () => {
+        let box = document.querySelector('.contents');
+        console.log("scrollHeight after load:", box.scrollHeight); 로딩된 후 .contents의 높이값을 구해, 정확히 측정
+        document.querySelector('.tabs-container').style.height=box.scrollHeight
+      });
+      }*/
+      function setTabsHeight() {
+      if (window.matchMedia('(min-width:1024px)').matches) {
+        let box = document.querySelector('.contents');
+        document.querySelector('.tabs-container').style.height = box.scrollHeight + "px";
+      } else {
+        // 모바일에서는 자동 높이
+        document.querySelector('.tabs-container').style.height = "auto";
+      }
+      }
+      window.addEventListener("load", setTabsHeight);
+      window.addEventListener("resize", setTabsHeight);
+    </script>
+  </body>
+</html>

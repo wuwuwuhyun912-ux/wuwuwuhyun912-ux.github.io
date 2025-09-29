@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="videopg.css" />
+    <style>
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        overflow-x: hidden;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        vertical-align: top;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      /* basic style end*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" id="left_bar_btn">
+        <img src="images/icons/toggle.png" alt="toggle" />
+      </a>
+      <a href="mainpg.htmlgit init" id="mobile_logo">
+        <img src="images/icons/logo.png" alt="logo" />
+      </a>
+      <a href="#" class="mypg">
+        <img src="images/icons/mypg.png" alt="mypg" />
+      </a>
+    </header>
+    <!-- mobile header end -->
+    <div id="desktopheader">
+      <h1>
+        <a href="mainpg.html"><img src="images/icons/logo.png" alt="" /></a>
+      </h1>
+      <ul id="global_menus">
+        <li>동영상 강좌</li>
+        <li>플러그인</li>
+        <li>커뮤니티</li>
+        <li>작곡모임</li>
+        <li>Radio</li>
+      </ul>
+      <span class="user">
+        <a href="#">
+          <img src="images/icons/profile.png" alt="프로필" />
+        </a>
+        <p>사용자의 이름 표시</p>
+      </span>
+    </div>
+    <div id="left_bar">
+      <img src="images/icons/close2.png" alt="닫기" id="close_btn" />
+      <div class="profile">
+        <a href="#"><img src="images/icons/profile.png" alt="프로필사진" /></a>
+        <p>
+          사용자의 이름 <br />
+          프로필 보기
+        </p>
+      </div>
+      <ul class="site_nav">
+        <li><a href="mainpg.html">동영상 강좌</a></li>
+        <li><a href="#">플러그인</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="#">작곡모임</a></li>
+        <li><a href="#">Radio</a></li>
+      </ul>
+      <ul class="user_service">
+        <li><a href="#">구독정보</a></li>
+        <li><a href="#">서비스 지원</a></li>
+        <li><a href="#">로그아웃</a></li>
+      </ul>
+      <ul class="sns_icons">
+        <li><img src="images/icons/facebook.png" alt="페이스북" /></li>
+        <li><img src="images/icons/twitter.png" alt="트위터" /></li>
+        <li><img src="images/icons/instagram.png" alt="인스타그램" /></li>
+        <li><img src="images/icons/youtube.png" alt="유튜브" /></li>
+      </ul>
+    </div>
+    <div id="overlay"></div>
+    <!-- left bar end -->
+    <div id="search">
+      <button id="search-btn">
+        <img src="images/icons/search.png" alt="검색" id="search-icon" />
+      </button>
+      <label for="search-input">검색어를 입력하세요</label>
+      <input type="search" id="search-input" />
+    </div>
+    <!-- search end -->
+    <div class="video-section">
+      <video id="myVideo">
+        <source src="video/lesson.mp4" type="video/mp4" />
+      </video>
+      <div class="content" id="textContent">
+        <h2>업그레이드 된 DPR CREAM의 음악작업과 실전팁!</h2>
+        <p>DPR CREAM · Producing Class</p>
+        <p>
+          대표곡 오픈트랙, 멘토링 세션까지, 음악의 디테일을 더하는 그만의
+          프로듀싱 스킬을 배워본다.
+        </p>
+      </div>
+      <!-- 재생 버튼 -->
+      <div class="play-btn" onclick="playVideo()">▶</div>
+      <!-- 정지 버튼 -->
+      <div class="pause-btn" onclick="pauseVideo()" style="display: none">
+        ⏸
+      </div>
+    </div>
+    <div class="video_tags_container">
+      <ul class="video_tags">
+        <li class="video_tag">사운드 디자인</li>
+        <li class="video_tag">fl studio</li>
+        <li class="video_tag">City pop</li>
+        <li class="video_tag">vintage</li>
+      </ul>
+    </div>
+    <!-- video-section end -->
+    <div id="background">
+      <div id="contents_wrapper">
+        <div class="contents_info">
+          <h2>클래스 정보</h2>
+          <div class="content_info1">
+            <h3>주요내용</h3>
+            <div class="content_info1_img">
+              <div class="content_info1_img1">
+                <img src="images/info1.1.jpg" alt="." class="desk" />
+                <img src="images/info1.1_mobile.jpg" alt="." class="mobile" />
+              </div>
+              <div class="info1_img2">
+                <img src="images/info1.2.jpg" alt="." class="desk" />
+                <img src="images/info1.2_mobile.jpg" alt="." class="mobile" />
+              </div>
+              <div class="info1_img3">
+                <img src="images/info1.3.jpg" alt="." class="desk" />
+                <img src="images/info1.3_mobile.jpg" alt="." class="mobile" />
+              </div>
+            </div>
+          </div>
+          <div class="content_info2">
+            <h3>추천 대상</h3>
+            <p>프로듀싱 실력이 늘지 않아 고민이신 분</p>
+            <p>아마추어와 다른 프로의 디테일과 관점이 궁금한 분</p>
+            <p>사운드 디자인 과정과 빌드업이 궁금한 분</p>
+          </div>
+          <div class="content_info3">
+            <div class="content_info3_1">
+              <img src="images/info3.1.jpg" alt="." />
+              <div class="content_info3_text">
+                <h4>
+                  곡의 완성도를 결정하는 <br />
+                  사운드 메이킹 팁
+                </h4>
+                <p>프로젝트 파일을 분석하며 사운드 메이킹에 대해 알아본다</p>
+                <p>- 곡에 사용된 가상악기와 샘플</p>
+                <p>- 풍성한 사운드를 위한 플러그인 활용</p>
+                <p>- 코드와 리듬을 구성한 이유</p>
+              </div>
+            </div>
+            <div class="content_info3_2">
+              <img src="images/info3.2.jpg" alt="." />
+              <div class="content_info3_text">
+                <h4>아마추어를 벗어나기 위한 디테일</h4>
+                <p>실력있는 프로듀서가 되기 위한 조언을 들어본다</p>
+                <p>- 어울리는 악기, 샘플 고르는 법</p>
+                <p>- 풍성한 사운드를 위한 플러그인 활용</p>
+              </div>
+            </div>
+            <div class="content_info3_3">
+              <img src="images/info3.3.jpg" alt="" />
+              <img src="images/icons/lock.png" alt="자물쇠" class="lock" />
+              <p>구매 후 무료로 시청 가능합니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="membership_wrap">
+          <div class="membership_info">
+            <p>무료 챕터 시청하기</p>
+            <div class="purchase">
+              <h4>패스 구매하기</h4>
+              <div class="membership_1">
+                <p>SINGLE CLASS</p>
+                <p>12,500원/월</p>
+              </div>
+              <div class="membership_2">
+                <p>ALL CLASS</p>
+                <p>20,500원/월</p>
+              </div>
+            </div>
+            <div class="class_info">
+              <h4>클래스 정보</h4>
+              <p>해당 클래스는 11개의 챕터로 구성되어 있습니다.</p>
+              <p>
+                본 클래스는 single class 구매 또는 ALL CLASS 구매로 시청할 수
+                있습니다.
+              </p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="images/icons/Home.png" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/icons/likes.png" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/icons/recent.png" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="images/icons/cart.png" alt="home" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <div id="footer_descktop">
+      <div class="footer_contents">
+        <a href="#"><img src="images/icons/logo.png" alt="" class="logo" /></a>
+        <div class="about">
+          <p class="site_name">FM sounds.</p>
+          <span class="site_info">
+            <p class="info1">
+              이용약관 개인정보취급방침 사업자정보확인 환불규정 공지사항 FAQ
+              <br />기업 교육 브랜드 제휴
+            </p>
+            <p class="info2">주식회사 우우우현</p>
+            <p class="info3">
+              대표 : 이우현 | 개인정보관리책임자 : 김우현 | 사업자 등록번호 :
+              321-21-54321 |
+              <br />
+              통신판매업 신고번호 : 2024-서울관악-54321 | ADRESS (54321) :
+              서울특별시 관악구 신림로 321길-21 (신림동 21-2) 1층~5층 |
+            </p>
+            <p class="info4">
+              V 2.12.21 <br />@ 2025 FM sounds All Rights Reserved
+            </p>
+          </span>
+        </div>
+        <div class="news">
+          <p>최신 소식 받기</p>
+          <span>
+            <img src="images/icons/facebook.png" alt="페이스북" />
+            <img src="images/icons/twitter.png" alt="트위터" />
+            <img src="images/icons/instagram.png" alt="인스타그램" />
+            <img src="images/icons/youtube.png" alt="유튜브" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- video-section end -->
+
+    <script>
+      const left_bar_btn = document.getElementById('left_bar_btn');
+      const left_bar = document.getElementById('left_bar');
+      const overlay = document.getElementById('overlay');
+      const close_btn = document.getElementById('close_btn');
+      left_bar_btn.addEventListener('click', () => {
+        left_bar.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+      close_btn.addEventListener('click', () => {
+        left_bar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      overlay.addEventListener('click', () => {
+        left_bar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+
+      //left bar end
+      const btn = document.getElementById('search-btn');
+      const input = document.getElementById('search-input');
+      const icon = document.getElementById('search-icon');
+      let isVisible = false;
+
+      btn.addEventListener('click', () => {
+        if (!isVisible) {
+          input.style.width = '82vw';
+          input.style.opacity = '1';
+          input.style.transform = 'translateX(0)';
+          icon.src = 'images/icons/close.jpg';
+        } else {
+          input.style.width = '0';
+          input.style.opacity = '0';
+          //input.style.transform = 'translateX(-2.78px)';
+          icon.src = 'images/icons/search.png';
+        }
+        isVisible = !isVisible;
+      });
+      // search style end
+
+      const video = document.getElementById('myVideo');
+      const textContent = document.getElementById('textContent');
+      const playBtn = document.querySelector('.play-btn');
+      const pauseBtn = document.querySelector('.pause-btn');
+      const videoSection = document.querySelector('.video-section');
+      // 미디어 쿼리 조건 설정
+      const mediaQuery = window.matchMedia('(min-width: 360px)');
+      function setupVideoEvents(query) {
+        // 조건이 충족되면 (1024px 이상) 이벤트 리스너를 추가
+        if (query.matches) {
+          playBtn.onclick = playVideo;
+          pauseBtn.onclick = pauseVideo;
+
+          videoSection.addEventListener('mouseenter', () => {
+            if (!video.paused) {
+              pauseBtn.style.display = 'block';
+            }
+          });
+
+          videoSection.addEventListener('mouseleave', () => {
+            pauseBtn.style.display = 'none';
+          });
+        } else {
+          // 조건이 충족되지 않으면 (1024px 미만) 이벤트 리스너를 제거
+          playBtn.onclick = null;
+          pauseBtn.onclick = null;
+          videoSection.removeEventListener('mouseenter', () => {});
+          videoSection.removeEventListener('mouseleave', () => {});
+        }
+      }
+      // 초기 로드 시 함수 실행
+      setupVideoEvents(mediaQuery);
+      // 브라우저 창 크기가 변경될 때마다 함수 실행
+      mediaQuery.addListener(setupVideoEvents);
+      function playVideo() {
+        video.style.display = 'block';
+        video.play();
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'block';
+        textContent.style.display = 'none';
+      }
+      function pauseVideo() {
+        video.pause();
+        pauseBtn.style.display = 'none';
+        playBtn.style.display = 'block';
+        textContent.style.display = 'block';
+      }
+      //video-section end
+      // 뷰포트보다 넓은 요소 찾기
+      const overflowingEls = [...document.querySelectorAll('*')].filter(
+        (el) => el.offsetWidth > document.documentElement.clientWidth
+      );
+
+      // 콘솔에 출력
+      console.log(overflowingEls);
+    </script>
+  </body>
+</html>

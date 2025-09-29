@@ -1,0 +1,5 @@
+search> 배너위에 얹고 background로 구분하기
+
+k-pop,hiphop 1줄,2줄 간격 up
+
+every genres 이미지크기 up, 들어간 느낌 없게

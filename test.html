@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .kpop_wrapper{
+      width: 720px ;
+    }
+    #content3_descktop p{
+      word-wrap: break-word;
+      width: 300px;
+    }
+    .kpop_first_row{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .kpop_first_row img{
+      width: 400px;
+      height: 230px;
+      display: flex;
+    }
+    .photo1{grid-area: photo1;
+    width: 120px;
+    height: 120px;
+  }
+    .photo2{grid-area: photo2;
+    width: 120px;
+    height: 120px;}
+    .photo3{grid-area: photo3;
+    width: 250px;
+  height: 250px;}
+    .photo4{grid-area: photo4;
+    width: 190px;
+  height: 120px;}
+    .photo5{grid-area: photo5;
+    width: 120px;
+    height: 120px;}
+    .photo6{grid-area: photo6;
+    width: 120px;
+    height: 120px;}
+    .photo7{grid-area: photo7;
+    width: 190px;
+  height: 120px;}
+  .kpop_second_row  a {
+  border-radius: 10px;
+  object-fit: cover;
+  }
+  .kpop_second_row img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  }
+
+    .kpop_second_row{
+      height: 250px;
+      display: grid;
+      grid-template-areas:
+      "photo1 photo2 photo3 photo3 photo4 photo4"
+      "photo5 photo6 photo3 photo3 photo7 photo7"
+      ;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+
+<section class="genre_video content" id="content3_descktop">
+  <h1>장르별 보기</h1>
+  
+  <div class="kpop_wrapper">
+    <div class="kpop_first_row">
+      <span class="first_row_text">
+        <h2 class="left">K-Pop</h2>
+        <p>
+          한국 팝의 줄임말인 K-Pop은 팝, 힙합, R&B, 일렉트로닉 음악의 끊임없이 진화하는 융합체입니다. 귀에 쏙 들어오는 멜로디, 동기화된 안무, 고도로 스타일화된 비주얼이 특징인 K-Pop은 90년대 초 서태지와 아이들 등의 그룹과 함께 형태를 갖추기 시작한 후 2000년대와 2010년대에 전 세계적인 현상으로 자리 잡았습니다.
+        </p>
+      </span>
+      <a href="#"><img src="images/genre_kpop_1.jpg" alt="kpop1"></a>
+    </div>
+    <div class="kpop_second_row">
+      <a href="#" class="photo1"><img src="images/genre_kpop_1.jpg" alt="kpop1"></a>
+      <a href="#" class="photo2"><img src="images/genre_kpop_2.jpg" alt="kpop2"></a>
+      <a href="#" class="photo3"><img src="images/genre_kpop_3.jpg" alt="kpop3"></a>
+      <a href="#" class="photo4"><img src="images/genre_kpop_4.jpg" alt="kpop4"></a>
+      <a href="#" class="photo5"><img src="images/genre_kpop_5.jpg" alt="kpop5"></a>
+      <a href="#" class="photo6"><img src="images/genre_kpop_6.jpg" alt="kpop6"></a>
+      <a href="#" class="photo7"><img src="images/genre_kpop_6.jpg" alt="kpop7"></a>
+    </div>
+  </div>
+  
+  <!-- <div class="hiphop_wrapper">
+    <div class="hiphop_text_and_header">
+      <h2 class="right">HipHop</h2>
+      <p>
+        힙합(HipHop)은 1970년대 뉴욕의 브롱스 지역에서 시작된 문화 운동으로, 음악(랩), 그래피티, 브레이크 댄스, DJing 등 다양한 요소로 이루어져 있습니다. 사회적 메시지와 리듬감 있는 랩이 특징이며, 자유로운 표현과 저항의 정신을 담고 있습니다. 현재는 전 세계적으로 가장 영향력 있는 대중문화 중 하나로 자리 잡았습니다.
+      </p>
+    </div>
+    <div class="hiphop_images">
+      <a href="#" class="photo1"><img src="images/genre_hiphop_1.jpg" alt="hiphop1"></a>
+      <a href="#" class="photo2"><img src="images/genre_hiphop_2.jpg" alt="hiphop2"></a>
+      <a href="#" class="photo3"><img src="images/genre_hiphop_3.jpg" alt="hiphop3"></a>
+      <a href="#" class="photo4"><img src="images/genre_hiphop_4.jpg" alt="hiphop4"></a>
+      <a href="#" class="photo5"><img src="images/genre_hiphop_5.jpg" alt="hiphop5"></a>
+      <a href="#" class="photo6"><img src="images/genre_hiphop_6.jpg" alt="hiphop6"></a>
+    </div>
+  </div>
+
+  <div class="every_wrapper">
+    <h2 class="center">Every Genres</h2>
+    <div class="every_images">
+      <a href="#" class="genre1"><img src="images/genre_all1.jpg" alt="genre_all1"></a>
+      <a href="#" class="genre2"><img src="images/genre_all2.jpg" alt="genre_all2"></a>
+      <a href="#" class="genre3"><img src="images/genre_all3.jpg" alt="genre_all3"></a>
+      <a href="#" class="genre4"><img src="images/genre_all4.jpg" alt="genre_all4"></a>
+      <a href="#" class="genre5"><img src="images/genre_all5.jpg" alt="genre_all5"></a>
+      <a href="#" class="genre6"><img src="images/genre_all6.jpg" alt="genre_all6"></a>
+    </div>
+  </div> -->
+</section>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="videopg.css">
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+      }
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        vertical-align: top;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      /* basic style end*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" id="left_bar_btn">
+        <img src="images/icons/toggle.png" alt="toggle" />
+      </a>
+      <a href="#">
+        <img src="images/icons/logo.jpg" alt="logo" />
+      </a>
+      <a href="#" class="mypg">
+        <img src="images/icons/mypg.png" alt="mypg" />
+      </a>
+    </header>
+    <!-- mobile header end -->
+    <div id="desktopheader">
+      <h1><img src="images/icons/logo.jpg" alt="" /></h1>
+      <ul id="global_menus">
+        <li>동영상 강좌</li>
+        <li>플러그인</li>
+        <li>커뮤니티</li>
+        <li>작곡모임</li>
+        <li>Radio</li>
+      </ul>
+      <span class="user">
+        <a href="#">
+          <img src="images/icons/profile.jpg" alt="프로필" />
+        </a>
+        <p>사용자의 이름 표시</p>
+      </span>
+    </div>
+    <div id="left_bar">
+      <img src="images/icons/close2.png" alt="닫기" id="close_btn" />
+      <div class="profile">
+        <a href="#"><img src="images/icons/profile.png" alt="프로필사진" /></a>
+        <p>
+          사용자의 이름 <br />
+          프로필 보기
+        </p>
+      </div>
+      <ul class="site_nav">
+        <li><a href="mainpg.html">동영상 강좌</a></li>
+        <li><a href="#">플러그인</a></li>
+        <li><a href="#">커뮤니티</a></li>
+        <li><a href="#">작곡모임</a></li>
+        <li><a href="#">Radio</a></li>
+      </ul>
+      <ul class="user_service">
+        <li><a href="#">구독정보</a></li>
+        <li><a href="#">서비스 지원</a></li>
+        <li><a href="#">로그아웃</a></li>
+      </ul>
+      <ul class="sns_icons">
+        <li><img src="images/icons/facebook.png" alt="페이스북" /></li>
+        <li><img src="images/icons/twitter.png" alt="트위터" /></li>
+        <li><img src="images/icons/instagram.png" alt="인스타그램" /></li>
+        <li><img src="images/icons/youtube.png" alt="유튜브" /></li>
+      </ul>
+    </div>
+    <div id="overlay"></div>
+    <!-- left bar end -->
+    <div id="search">
+      <button id="search-btn">
+        <img src="images/icons/search.png" alt="검색" id="search-icon" />
+      </button>
+      <label for="search-input">검색어를 입력하세요</label>
+      <input type="search" id="search-input" />
+      </div>
+    <!-- search end -->
+    <div class="video-section">
+    <video id="myVideo" poster="video/thumbnail.jpg">
+    <source src="video/column.mp4" type="video/mp4">
+    </video>
+    <div class="content" id="textContent">
+    <h2>업그레이드 된 DPR CREAM의 음악작업과 실전팁!</h2>
+    <p>DPR CREAM · Producing Class</p>
+    <p>대표곡 오픈트랙, 멘토링 세션까지, 음악의 디테일을 더하는 
+    그만의 프로듀싱 스킬을 배워본다.</p>
+  </div>
+    <!-- 재생 버튼 -->
+    <div class="play-btn" onclick="playVideo()">▶</div>
+    <!-- 정지 버튼 -->
+    <div class="pause-btn" onclick="pauseVideo()" style="display: none;">⏸</div>
+    </div>
+    <div class="video_tags_container">
+      <ul class="video_tags">
+        <li class="video_tag">사운드 디자인</li>
+        <li class="video_tag">fl studio</li>
+        <li class="video_tag">City pop</li>
+        <li class="video_tag">vintage</li>
+      </ul>
+    </div>
+    <!-- video-section end -->
+    
+    
+    <script>
+      const left_bar_btn = document.getElementById('left_bar_btn');
+      const left_bar = document.getElementById('left_bar');
+      const overlay = document.getElementById('overlay');
+      const close_btn = document.getElementById('close_btn');
+      left_bar_btn.addEventListener('click', () => {
+        left_bar.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+      close_btn.addEventListener('click', () => {
+        left_bar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+      overlay.addEventListener('click', () => {
+        left_bar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+
+      //left bar end
+      const btn = document.getElementById('search-btn');
+      const input = document.getElementById('search-input');
+      const icon = document.getElementById('search-icon');
+      let isVisible = false;
+
+      btn.addEventListener('click', () => {
+        if (!isVisible) {
+          input.style.width = '83.4vw';
+          input.style.opacity = '1';
+          input.style.transform = 'translateX(0)';
+          icon.src = 'images/icons/close.jpg';
+        } else {
+          input.style.width = '0';
+          input.style.opacity = '0';
+          input.style.transform = 'translateX(-2.78px)';
+          icon.src = 'images/icons/search.png';
+        }
+        isVisible = !isVisible;
+      });
+      // search style end
+
+const video = document.getElementById("myVideo");
+const textContent = document.getElementById("textContent");
+const playBtn = document.querySelector(".play-btn");
+const pauseBtn = document.querySelector(".pause-btn");
+const videoSection = document.querySelector(".video-section");
+// 미디어 쿼리 조건 설정
+const mediaQuery = window.matchMedia("(min-width: 1024px)");
+function setupVideoEvents(query) {
+  // 조건이 충족되면 (1024px 이상) 이벤트 리스너를 추가
+  if (query.matches) {
+    playBtn.onclick = playVideo;
+    pauseBtn.onclick = pauseVideo;
+
+    videoSection.addEventListener("mouseenter", () => {
+      if (!video.paused) {
+        pauseBtn.style.display = "block";
+      }else{pauseBtn.style.display = "none";}
+    });
+
+    videoSection.addEventListener("mouseleave", () => {
+      pauseBtn.style.display = "none";
+    });
+  } else {
+    // 조건이 충족되지 않으면 (1024px 미만) 이벤트 리스너를 제거
+    playBtn.onclick = null;
+    pauseBtn.onclick = null;
+    videoSection.removeEventListener("mouseenter", () => {});
+    videoSection.removeEventListener("mouseleave", () => {});
+  }
+}
+// 초기 로드 시 함수 실행
+setupVideoEvents(mediaQuery);
+// 브라우저 창 크기가 변경될 때마다 함수 실행
+mediaQuery.addListener(setupVideoEvents);
+function playVideo() {
+  video.style.display = "block";
+  video.play();
+  playBtn.style.display = "none";
+  pauseBtn.style.display = "block";
+  textContent.style.display = "none";
+}
+function pauseVideo() {
+  video.pause();
+  pauseBtn.style.display = "none";
+  playBtn.style.display = "block";
+  textContent.style.display = "block"; 
+
+}
+      //video-section end
+      // 뷰포트보다 넓은 요소 찾기
+      const overflowingEls = [...document.querySelectorAll('*')].filter(
+        (el) => el.offsetWidth > document.documentElement.clientWidth
+      );
+
+      // 콘솔에 출력
+      console.log(overflowingEls);
+    </script>
+  </body>
+</html>
